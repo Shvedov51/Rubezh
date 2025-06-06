@@ -68,5 +68,8 @@
     <ClInclude Include="gui\imgui_impl_opengl3_loader.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="vars.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

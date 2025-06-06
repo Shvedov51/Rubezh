@@ -166,6 +166,7 @@
     <ClInclude Include="gui\imstb_rectpack.h" />
     <ClInclude Include="gui\imstb_textedit.h" />
     <ClInclude Include="gui\imstb_truetype.h" />
+    <ClInclude Include="vars.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

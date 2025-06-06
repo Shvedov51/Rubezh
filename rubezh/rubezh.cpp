@@ -1,11 +1,14 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
+#include <windows.h>
+
 #include <glad/glad.h> //https://www.reddit.com/r/cpp_questions/comments/ryr3fk/good_explanations_of_differences_between_glfw/?tl=ru
 #include <GLFW/glfw3.h>
 
-#include"imgui.h"
-#include"imgui_impl_glfw.h"
-#include"imgui_impl_opengl3.h"
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
+#include "vars.h"
 
 void resizeCallback(GLFWwindow* window, int width, int height)
 {
@@ -35,7 +38,11 @@ void main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
-    while (true) 
+    CreateDirectory("C:\\Rubezh", NULL);
+    CreateDirectory("C:\\Rubezh\\mods", NULL);
+    CreateDirectory("C:\\Rubezh\\settings", NULL);
+
+    while (g.game_exit != true) 
     {
         glClear(GL_COLOR_BUFFER_BIT);
 
