@@ -1,7 +1,6 @@
 ﻿#include <iostream>
-
-#include <GLFW/glfw3.h>
 #include <glad/glad.h> //https://www.reddit.com/r/cpp_questions/comments/ryr3fk/good_explanations_of_differences_between_glfw/?tl=ru
+#include <GLFW/glfw3.h>
 
 void main()
 {
@@ -10,22 +9,25 @@ void main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(400, 400, "Window", NULL, NULL);
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return;
-    }
+    GLFWwindow* window = glfwCreateWindow(400, 400, "Rubezh", NULL, NULL);
 
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, NULL);
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+
+    glClearColor(0.5, 0.5, 0.5, 1);
+
+    while (!glfwWindowShouldClose(window)) 
     {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return;
+        glClear(GL_COLOR_BUFFER_BIT);
+
+
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
     }
 
-    std::cout << "Hello World!\n";
+    glfwDestroyWindow(window);
+    glfwTerminate(); 
 }
