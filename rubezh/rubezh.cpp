@@ -37,7 +37,7 @@ const char* fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
 "void main()\n"
 "{\n"
-"   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"   FragColor = vec4(1.0f, 0.5f, 0.5f, 1.0f);\n"
 "}\n\0";
 
 void main()
@@ -118,7 +118,7 @@ void main()
 
     glBindVertexArray(0);
 
-    while (g.game_exit != true || !glfwWindowShouldClose(window))
+    while (g.game_exit != true)
     {
         glClear(GL_COLOR_BUFFER_BIT);
 
@@ -139,6 +139,9 @@ void main()
         {
             ImGui::Text(infoLog);
         }
+        else
+            ImGui::Text("No errors found");
+        ImGui::Text("09.06.2025");
         ImGui::End();
 
         ImGui::Render();
