@@ -78,7 +78,6 @@ void main()
     if (!success)
     {
         glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
         g.game_erros = true;
     }
 
@@ -86,6 +85,13 @@ void main()
     fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
     glCompileShader(fragmentShader);
+
+    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+    if (!success)
+    {
+        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+        g.game_erros = true;
+    }
 
     unsigned int shaderProgram;
     shaderProgram = glCreateProgram();
@@ -142,6 +148,7 @@ void main()
         else
             ImGui::Text("No errors found");
         ImGui::Text("09.06.2025");
+        ImGui::Text("Press esc to exit");
         ImGui::End();
 
         ImGui::Render();
