@@ -72,15 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>coreD</TargetName>
+    <IntDir>build\debug\trash</IntDir>
+    <OutDir>build\debug</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>core</TargetName>
+    <IntDir>build\release\trash</IntDir>
+    <OutDir>build\release</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>coreD</TargetName>
+    <IntDir>build\debug\trash</IntDir>
+    <OutDir>build\debug</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>core</TargetName>
+    <IntDir>build\release\trash</IntDir>
+    <OutDir>build\release</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

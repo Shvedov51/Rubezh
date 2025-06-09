@@ -63,9 +63,9 @@ void main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
-    CreateDirectory("C:\\Rubezh", NULL);
-    CreateDirectory("C:\\Rubezh\\mods", NULL);
-    CreateDirectory("C:\\Rubezh\\settings", NULL);
+    CreateDirectoryA("C:\\Rubezh", NULL);
+    CreateDirectoryA("C:\\Rubezh\\mods", NULL);
+    CreateDirectoryA("C:\\Rubezh\\settings", NULL);
 
     unsigned int vertexShader;
     vertexShader = glCreateShader(GL_VERTEX_SHADER); //компоновка
