@@ -147,6 +147,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="graphics\shader.cpp" />
+    <ClCompile Include="graphics\texture.cpp" />
     <ClCompile Include="gui\imgui.cpp" />
     <ClCompile Include="gui\imgui_demo.cpp" />
     <ClCompile Include="gui\imgui_draw.cpp" />
@@ -157,6 +159,8 @@
     <ClCompile Include="rubezh.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="graphics\shader.h" />
+    <ClInclude Include="graphics\texture.h" />
     <ClInclude Include="gui\imconfig.h" />
     <ClInclude Include="gui\imgui.h" />
     <ClInclude Include="gui\imgui_impl_glfw.h" />
